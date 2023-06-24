@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package rpc.example.v1;
+
+service Example {
+  rpc MyExample(MyExampleRequest) returns(MyExampleResponse);
+}
+
+message MyExampleRequest {
+  uint32 account_id = 1;
+}
+
+message MyExampleResponse {
+  map<uint32, string> my_response = 1;
+}

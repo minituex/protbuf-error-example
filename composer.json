@@ -1,0 +1,28 @@
+{
+  "name": "example/protobuf-error",
+  "description": "",
+  "type": "example",
+  "require": {
+    "google/protobuf": "^3.21",
+    "grpc/grpc": "^1.42",
+    "ext-json": "*",
+    "ext-grpc": "*"
+  },
+  "scripts": {},
+  "autoload": {
+    "psr-4": {
+      "Example\\": ["src/"],
+      "Rpc\\": ["build/gen/Rpc/"],
+      "GPBMetadata\\" : ["build/gen/GPBMetadata/"]
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "secure-http": false,
+    "platform": {
+      "php": "7.4.3"
+    }
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}
